@@ -7,16 +7,17 @@ namespace Data
 
     public partial class ModelSistema : DbContext
     {
+
         public ModelSistema()
             : base("name=ModelSistema")
         {
         }
 
-        public virtual DbSet<Usuario> usuarios { get; set; }
-        public virtual DbSet<Categoria> categorias { get; set; }
-        public virtual DbSet<Produto> produtos { get; set; }
-        public virtual DbSet<Venda> vendas { get; set; }
-        public virtual DbSet<ItensVenda> itensVenda { get; set; }
+        public virtual DbSet<Usuario> Usuarios { get; set; }
+        public virtual DbSet<Categoria> Categorias { get; set; }
+        public virtual DbSet<Produto> Produtos { get; set; }
+        public virtual DbSet<Venda> Vendas { get; set; }
+        public virtual DbSet<ItensVenda> ItensVenda { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

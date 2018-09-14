@@ -8,17 +8,22 @@ using System.Threading.Tasks;
 
 namespace Data
 {
+    [Table("ItensVenda")]
     public class ItensVenda
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        int itv_id { get; set; }
-        int itv_venda_id { get; set; }
-        [ForeignKey("itv_venda_id")]
-        Venda itv_venda { get; set; }
-        int itv_produto_id { get; set; }
-        [ForeignKey("itv_produto_id")]
-        Produto itv_produto { get; set; }
-        decimal itv_valor_prod { get; set; }
+        public int Itv_id { get; set; }
+
+        public int Itv_venda_id { get; set; }
+        [ForeignKey("Itv_venda_id")]
+        Venda Itv_venda { get; set; }
+
+        public int Itv_produto_id { get; set; }
+        [ForeignKey("Itv_produto_id")]
+        Produto Itv_produto { get; set; }
+
+        public decimal Itv_valor_prod { get; set; }
+
+        public ICollection<Produto> Produtos { get; set; }
     }
 }

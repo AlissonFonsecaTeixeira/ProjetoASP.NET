@@ -1,0 +1,15 @@
+C:\Users\aliss\source\repos\projetoASP.NET\DAL\bin\Debug\DAL.dll.config
+C:\Users\aliss\source\repos\projetoASP.NET\DAL\bin\Debug\DAL.dll
+C:\Users\aliss\source\repos\projetoASP.NET\DAL\bin\Debug\DAL.pdb
+C:\Users\aliss\source\repos\projetoASP.NET\DAL\bin\Debug\Data.dll
+C:\Users\aliss\source\repos\projetoASP.NET\DAL\bin\Debug\EntityFramework.dll
+C:\Users\aliss\source\repos\projetoASP.NET\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\aliss\source\repos\projetoASP.NET\DAL\bin\Debug\Data.pdb
+C:\Users\aliss\source\repos\projetoASP.NET\DAL\bin\Debug\Data.dll.config
+C:\Users\aliss\source\repos\projetoASP.NET\DAL\bin\Debug\EntityFramework.xml
+C:\Users\aliss\source\repos\projetoASP.NET\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\aliss\source\repos\projetoASP.NET\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\aliss\source\repos\projetoASP.NET\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\aliss\source\repos\projetoASP.NET\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\aliss\source\repos\projetoASP.NET\DAL\obj\Debug\DAL.dll
+C:\Users\aliss\source\repos\projetoASP.NET\DAL\obj\Debug\DAL.pdb

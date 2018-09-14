@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace Data
 {
+    [Table("Usuario")]
     public class Usuario
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        int usu_id { get; set; }
-        string usu_login { get; set; }
-        string usu_senha { get; set; }
+        public int Usu_id { get; set; }
+        public string Usu_login { get; set; }
+        public string Usu_senha { get; set; }
     }
 }

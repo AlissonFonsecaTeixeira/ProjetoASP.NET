@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace Data
 {
+    [Table("Categoria")]
     public class Categoria
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        int cat_id { get; set; }
-        string cat_nome { get; set; }
-        string cat_descricao { get; set; }
+        public int Cat_id { get; set; }
+        public string Cat_nome { get; set; }
+        public string Cat_descricao { get; set; }
     }
 }

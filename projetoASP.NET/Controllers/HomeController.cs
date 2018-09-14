@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Data;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -10,6 +12,7 @@ namespace projetoASP.NET.Controllers
     {
         public ActionResult Index()
         {
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<ModelSistema>());
             return View();
         }
 

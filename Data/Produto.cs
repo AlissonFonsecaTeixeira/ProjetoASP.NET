@@ -8,14 +8,18 @@ using System.Threading.Tasks;
 
 namespace Data
 {
+    [Table("Produto")]
     public class Produto
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        int pro_id { get; set; }
-        string pro_nome { get; set; }
-        int pro_categoria_id { get; set; }
-        [ForeignKey("pro_categoria_id")]
-        Categoria pro_categoria { get; set; }
+        public int Pro_id { get; set; }
+
+        public string Pro_nome { get; set; }
+
+        public int Pro_categoria_id { get; set; }
+        [ForeignKey("Pro_categoria_id")]
+        public Categoria Pro_categoria { get; set; }
+
+        public ICollection<Categoria> Categorias { get; set; }
     }
 }

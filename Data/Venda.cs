@@ -8,15 +8,19 @@ using System.Threading.Tasks;
 
 namespace Data
 {
+    [Table("Venda")]
     public class Venda
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        int ven_id { get; set; }
-        int ven_usuario_id { get; set; }
-        [ForeignKey("ven_usuario_id")]
-        Usuario ven_usuario { get; set; }
-        decimal ven_total { get; set; }
-        DateTime ven_data { get; set; }
+        public int Ven_id { get; set; }
+
+        public int Ven_usuario_id { get; set; }
+        [ForeignKey("Ven_usuario_id")]
+        public Usuario Ven_usuario { get; set; }
+
+        public decimal Ven_total { get; set; }
+        public DateTime Ven_data { get; set; }
+
+        public ICollection<ItensVenda> ItensDaVenda { get; set; }
     }
 }
