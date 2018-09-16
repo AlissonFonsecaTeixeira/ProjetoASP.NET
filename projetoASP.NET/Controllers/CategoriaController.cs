@@ -52,25 +52,19 @@ namespace projetoASP.NET.Controllers
         }
 
         // GET: Categoria/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Categoria/Edit/5
-        [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
-            try
-            {
-                // TODO: Add update logic here
+            Categoria categoria = categoriaService.buscar(id);
+            
+            return View(categoria);
+            
+        }
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+        [HttpPost]
+        public ActionResult Edit(Categoria categoria)
+        {
+            categoriaService.editar(categoria);
+            return RedirectToAction("Index");
         }
 
         // GET: Categoria/Delete/5

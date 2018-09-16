@@ -1,0 +1,28 @@
+﻿@model Data.Produto
+
+<div>
+    <h4>Produto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pro_categoria.Cat_nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pro_categoria.Cat_nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pro_nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pro_nome)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Pro_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

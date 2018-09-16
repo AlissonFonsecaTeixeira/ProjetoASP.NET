@@ -1,6 +1,7 @@
 ﻿using Data;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,19 @@ namespace DAL
         {
             ctx.Categorias.Add(categoria);
             ctx.SaveChanges();
+        }
+
+        public Categoria buscar (int id)
+        {
+            return ctx.Categorias.Where(c => c.Cat_id == id).FirstOrDefault();
+        }
+
+        public Categoria editar (Categoria categoria)
+        {
+            ctx.Entry(categoria).State = EntityState.Modified;
+            //ctx.Categorias.Add(categoria);
+            ctx.SaveChanges();
+            return categoria;
         }
     }
 }

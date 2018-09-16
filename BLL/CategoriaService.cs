@@ -21,5 +21,15 @@ namespace BLL
         {
             categoriaDAO.Incluir(categoria);
         }
+
+        public Categoria buscar (int id)
+        {
+            return categoriaDAO.buscar(id);
+        }
+
+        public Categoria editar (Categoria categoria)
+        {
+            return categoriaDAO.editar(categoria);
+        }
     }
 }

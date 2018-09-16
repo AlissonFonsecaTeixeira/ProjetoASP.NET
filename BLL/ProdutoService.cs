@@ -16,5 +16,21 @@ namespace BLL
         {
             return produtoDAO.Listar();
         }
+
+        public void Incluir(Produto produto)
+        {
+            produtoDAO.Incluir(produto);
+        }
+
+        public Produto buscar(int id)
+        {
+            return produtoDAO.buscar(id);
+        }
+
+        public Produto editar(Produto produto)
+        {
+            return produtoDAO.editar(produto);
+        }
+
     }
 }
