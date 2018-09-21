@@ -109,3 +109,9 @@ C:\Users\aliss\source\repos\projetoASP.NET\projetoASP.NET\bin\EntityFramework.xm
 C:\Users\aliss\source\repos\projetoASP.NET\projetoASP.NET\bin\BLL.dll.config
 C:\Users\aliss\source\repos\projetoASP.NET\projetoASP.NET\bin\EntityFramework.SqlServer.dll
 C:\Users\aliss\source\repos\projetoASP.NET\projetoASP.NET\bin\EntityFramework.SqlServer.xml
+C:\Users\aliss\source\repos\projetoASP.NET\projetoASP.NET\bin\System.Net.Http.Formatting.dll
+C:\Users\aliss\source\repos\projetoASP.NET\projetoASP.NET\bin\System.Web.Http.dll
+C:\Users\aliss\source\repos\projetoASP.NET\projetoASP.NET\bin\System.Web.Http.WebHost.dll
+C:\Users\aliss\source\repos\projetoASP.NET\projetoASP.NET\bin\System.Net.Http.Formatting.xml
+C:\Users\aliss\source\repos\projetoASP.NET\projetoASP.NET\bin\System.Web.Http.xml
+C:\Users\aliss\source\repos\projetoASP.NET\projetoASP.NET\bin\System.Web.Http.WebHost.xml
