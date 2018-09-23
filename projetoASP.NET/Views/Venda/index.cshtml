@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Data.Venda>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Usuário
+        </th>
+        <th>
+            CPF do Usuário
+        </th>
+        <th>
+            Total pago
+        </th>
+        <th>
+            Data da Venda
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ven_usuario.Usu_login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ven_usuario.Usu_cpf)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ven_total)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ven_data)
+        </td>
+    </tr>
+}
+
+</table>

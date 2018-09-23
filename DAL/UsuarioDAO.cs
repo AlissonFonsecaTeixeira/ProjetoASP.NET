@@ -23,6 +23,11 @@ namespace DAL
             ctx.SaveChanges();
         }
 
+        public Usuario buscarPorCPF(string cpf)
+        {
+            return ctx.Usuarios.Where(u => u.Usu_cpf == cpf).FirstOrDefault();
+        }
+
         public Usuario buscar(int id)
         {
             return ctx.Usuarios.Where(u => u.Usu_id == id).FirstOrDefault();

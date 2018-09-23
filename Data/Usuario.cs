@@ -13,6 +13,7 @@ namespace Data
     {
         [Key]
         public int Usu_id { get; set; }
+        public string Usu_cpf { get; set; }
         public string Usu_login { get; set; }
         public string Usu_senha { get; set; }
     }

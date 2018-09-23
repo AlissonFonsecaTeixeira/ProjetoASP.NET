@@ -42,6 +42,7 @@ namespace projetoASP.NET.Controllers
             try
             {
                 usuario.Usu_login = collection["Usu_login"];
+                usuario.Usu_cpf = collection["Usu_cpf"];
                 usuario.Usu_senha = collection["Usu_senha"];
 
                 usuarioService.Incluir(usuario);
@@ -69,8 +70,10 @@ namespace projetoASP.NET.Controllers
             try
             {
                 usuario.Usu_login = collection["Usu_login"];
+                usuario.Usu_cpf = collection["Usu_cpf"];
                 usuario.Usu_senha = collection["Usu_senha"];
 
+                usuarioService.editar(usuario);
 
                 return RedirectToAction("Index");
             }

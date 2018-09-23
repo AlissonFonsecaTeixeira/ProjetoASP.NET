@@ -1,0 +1,107 @@
+﻿@model IEnumerable<Data.Produto>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="form-horizontal">
+        <h4>Usuario</h4>
+        <hr />
+        <div class="col-md-6  form-group">
+            <div class="col-md-10">
+                <div class="row"></div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group busca-usuario">
+            <div class="col-md-10">
+                <label for="Usu_id">Informe o CPF do Usuário</label>
+                <input class="form-control" type="text" name="Usu_cpf" id="Usu_cpf" />
+            </div>
+        </div>
+
+        <div class="form-group lista-produtos hide">
+            <div class="col-md-10">
+                <label for="nome-usuario">Nome do Usuário</label>
+                <input type="text" disabled="disabled" readonly="readonly" name="nome-usuario" class="form-control nome-usuario" />
+                <input type="hidden" name="Usu_id" class="form-control id-usuario" />
+                <div class="row"></div>
+                <br />
+                <table class="table table-striped">
+                    <tr>
+                        <th>
+                            Categoria
+                        </th>
+                        <th>
+                            Produto
+                        </th>
+                        <th>Adicionar Ao Carrinho</th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Pro_categoria.Cat_nome)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Pro_nome)
+                            </td>
+                            <td>
+                                <input type="checkbox" name="produto[]" value="@item.Pro_id" />
+                            </td>
+                        </tr>
+
+                    }
+                </table>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button type="submit" class="btn btn-success lista-produtos" >Registrar Venda</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="button" class="btn btn-xs btn-primary busca-usuario" onclick="buscaUsuario()">Buscar Usuario</button>
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval");
+}
+
+<script language="javascript" type="text/javascript">
+
+    function buscaUsuario() {
+
+        var cpf = $('#Usu_cpf').val();
+
+        $.ajax({
+            url: '/api/UsuarioApi/GetUsuario',
+            method: 'GET',
+            data: { cpf: cpf },
+            success: function (data) {
+                $('.busca-usuario').addClass('hide');
+                $('.nome-usuario').val(data.Usu_login);
+                $('.id-usuario').val(data.Usu_id);
+                $('.lista-produtos').removeClass('hide');
+                console.log(data.Usu_id);
+            },
+            error: function (data) {
+                alert("CPF não encontrado em nosso sistema !");
+            }
+        });
+    }
+</script>

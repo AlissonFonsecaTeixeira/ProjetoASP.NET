@@ -15,6 +15,8 @@ namespace Data
         public int Pro_id { get; set; }
 
         public string Pro_nome { get; set; }
+        [DataType(DataType.Currency)]
+        public decimal Pro_valor { get; set; }
 
         public int Pro_categoria_id { get; set; }
         [ForeignKey("Pro_categoria_id")]

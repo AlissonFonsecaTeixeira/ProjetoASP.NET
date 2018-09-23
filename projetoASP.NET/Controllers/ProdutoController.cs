@@ -48,6 +48,7 @@ namespace projetoASP.NET.Controllers
 
             produto.Pro_categoria_id = Convert.ToInt32(collection["Pro_categoria_id"]);
             produto.Pro_nome = collection["Pro_nome"];
+            produto.Pro_valor = Convert.ToDecimal(collection["Pro_valor"]);
 
             produtoService.Incluir(produto);
 
@@ -76,6 +77,7 @@ namespace projetoASP.NET.Controllers
             {
                 // TODO: Add update logic here
                 produto.Pro_nome = collection["Pro_nome"];
+                produto.Pro_valor = Convert.ToDecimal(collection["Pro_valor"]);
                 produto.Pro_categoria_id = Convert.ToInt32(collection["Pro_categoria_id"]);
                 produtoService.editar(produto);
                 return RedirectToAction("Index");

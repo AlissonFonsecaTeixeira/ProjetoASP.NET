@@ -6,10 +6,10 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Usu_login)
+            Nome
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Usu_senha)
+            CPF
         </th>
         <th></th>
     </tr>
@@ -20,7 +20,7 @@
             @Html.DisplayFor(modelItem => item.Usu_login)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Usu_senha)
+            @Html.DisplayFor(modelItem => item.Usu_cpf)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Usu_id }) |

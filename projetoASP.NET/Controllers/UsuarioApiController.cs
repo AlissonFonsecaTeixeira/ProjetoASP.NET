@@ -18,16 +18,18 @@ namespace projetoASP.NET.Controllers
         UsuarioService usuarioService = new UsuarioService();
 
         // GET: api/Usuario
+        [HttpGet]
         public IList<Usuario> GetUsuarios()
         {
             return usuarioService.Listar();
         }
 
         // GET: api/Usuario/5
+        [HttpGet]
         [ResponseType(typeof(Usuario))]
-        public IHttpActionResult GetUsuario(int id)
+        public IHttpActionResult GetUsuario(string cpf)
         {
-            Usuario usuario = usuarioService.buscar(id);
+            Usuario usuario = usuarioService.buscarPorCPF(cpf);
             if (usuario == null)
             {
                 return NotFound();

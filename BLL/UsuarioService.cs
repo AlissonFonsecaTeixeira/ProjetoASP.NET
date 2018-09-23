@@ -17,6 +17,11 @@ namespace BLL
             return usuarioDAO.Listar();
         }
 
+        public Usuario buscarPorCPF(string cpf)
+        {
+            return usuarioDAO.buscarPorCPF(cpf);
+        }
+
         public void Incluir(Usuario usuario)
         {
             usuarioDAO.Incluir(usuario);

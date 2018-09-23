@@ -6,10 +6,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Pro_categoria.Cat_nome)
+            Categoria
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Pro_nome)
+            Nome
+        </th>
+        <th>
+            Valor
         </th>
         <th></th>
     </tr>
@@ -23,9 +26,12 @@
             @Html.DisplayFor(modelItem => item.Pro_nome)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Pro_id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Pro_id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Pro_id })
+            @Html.DisplayFor(modelItem => item.Pro_valor)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Pro_id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Pro_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Pro_id })
         </td>
     </tr>
 }
