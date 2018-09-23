@@ -35,5 +35,14 @@ namespace DAL
             ctx.SaveChanges();
             return categoria;
         }
+
+        public Boolean remover(int id)
+        {
+            Categoria categoria= this.buscar(id);
+
+            ctx.Categorias.Remove(categoria);
+
+            return true;
+        }
     }
 }

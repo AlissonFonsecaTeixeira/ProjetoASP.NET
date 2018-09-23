@@ -31,5 +31,10 @@ namespace BLL
         {
             return categoriaDAO.editar(categoria);
         }
+
+        public Boolean remover(int id)
+        {
+            return categoriaDAO.remover(id);
+        }
     }
 }

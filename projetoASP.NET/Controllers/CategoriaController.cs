@@ -22,7 +22,7 @@ namespace projetoASP.NET.Controllers
         // GET: Categoria/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(categoriaService.buscar(id));
         }
 
         // GET: Categoria/Create
@@ -79,7 +79,7 @@ namespace projetoASP.NET.Controllers
         {
             try
             {
-                // TODO: Add delete logic here
+                categoriaService.remover(id);
 
                 return RedirectToAction("Index");
             }
